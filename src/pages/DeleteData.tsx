@@ -46,7 +46,7 @@ const DeleteData = () => {
           onChange={(value: string) => setDataId(value)}
         ></TextInput>
         <button
-          className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full"
+          className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"
           onClick={() => deleteUser()}
         >
           Delete
