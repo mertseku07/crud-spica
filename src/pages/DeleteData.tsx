@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import TextInput from "../components/inputs/text";
 import Alert from "../components/Alert";
 import LoadingSpinner from "../components/LoadingSpinner";
+import Footer from "../components/Footer";
 
 import * as Identity from "@spica-devkit/identity";
 import * as Bucket from "@spica-devkit/bucket";
@@ -100,6 +101,7 @@ const DeleteData = () => {
           </div>
         )}
       </div>
+      <Footer/>
     </div>
   );
 };
