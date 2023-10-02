@@ -4,6 +4,7 @@ import * as Identity from "@spica-devkit/identity";
 import * as Bucket from "@spica-devkit/bucket";
 import TextInput from "../components/inputs/text";
 import Alert from "../components/Alert";
+import Footer from "../components/Footer";
 
 const AddData = () => {
   const [phone, setPhone] = useState<string>("");
@@ -14,6 +15,10 @@ const AddData = () => {
   );
 
   const spicaMasterUrl = process.env.REACT_APP_SPICA_MASTER!;
+
+  const clearAlert = () => {
+  setAlert(null);
+};
 
   Identity.initialize({
     apikey: "e951i18lm4zdrot",
@@ -70,8 +75,9 @@ const AddData = () => {
           >
             Submit
           </button>
-          {alert && <Alert type={alert.type} message={alert.message} />}
+          {alert && <Alert type={alert.type} message={alert.message} onClose={clearAlert}/>}
       </div>
+      <Footer/>
     </div>
   );
 };
